@@ -1,11 +1,10 @@
 (ns simple-http.handler
   (:require [compojure.core :refer :all]
-            [compojure.route :as route]
+            [simple-http.todos :refer [getAllTodos]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
 
 (defroutes app-routes
-  (GET "/" [] "Hello World")
-  (route/not-found "Not Found"))
+  (GET "/" [] getAllTodos))
 
 (def app
   (wrap-defaults app-routes site-defaults))
