@@ -1,19 +1,44 @@
-# simple_http
 
-FIXME
+# Todo API
 
-## Prerequisites
+Маленькое REST API приложение для работы с списком дел.
 
-You will need [Leiningen][] 2.0.0 or above installed.
 
-[leiningen]: https://github.com/technomancy/leiningen
+## API Reference
 
-## Running
+#### Получение всех задач
 
-To start a web server for the application, run:
+```http
+  GET /all
+```
 
-    lein ring server
+#### Добавление новой задачи
 
-## License
+```http
+  POST /new
+```
 
-Copyright © 2022 FIXME
+| Body         | Type     | Description                       | Required |
+| :----------- | :------- | :-------------------------------- | :------- |
+| `title`      | `string` | Заголовок задачи                  |    true  |
+| `body`       | `string` | Описание задачи                   |   true   |
+
+## Installation
+
+Запуск сервера для разработки
+
+```bash
+lein ring server-headless
+```
+    
+## Roadmap
+
+- Добавить удаление задач
+
+- Добавить получение задач по айди
+
+- Подключить NoSQL БД
+
+- Добавить тесты
+
+- Добавить дополнительные инструкции для раздела **Installation**
