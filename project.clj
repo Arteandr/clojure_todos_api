@@ -5,7 +5,8 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [compojure "1.6.1"]
                  [ring/ring-defaults "0.3.2"]
-                 [org.clojure/data.json "2.4.0"]]
+                 [org.clojure/data.json "2.4.0"]
+                 [ring/ring-json "0.5.1"]]
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler simple-http.handler/app}
   :profiles
